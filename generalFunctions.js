@@ -35,3 +35,7 @@ Array.prototype.searchObjectArray = function(objectKey, searchTerm){
     return -1;
 
 };
+
+Array.prototype.sortObjectArray = function(objectKey){
+    return this.sort(function(a, b){return a[objectKey] - b[objectKey]});
+};
