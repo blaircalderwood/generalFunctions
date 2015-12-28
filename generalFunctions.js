@@ -55,17 +55,5 @@ Array.prototype.sortObjectArray = function (objectKey) {
 };
 
 String.prototype.wordCount = function () {
-
-    var wordCount = 0;
-
-    if (this.length > 0)wordCount++;
-
-    for (var i = 1; i < this.length; i++) {
-        if (this.charCodeAt(i - 1) == 32 && this.charCodeAt(i) !== 32) {
-            wordCount++;
-        }
-    }
-
-    return wordCount;
-
+    return this.split(" ").length;
 };
